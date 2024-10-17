@@ -1,24 +1,25 @@
-"""def Rotate(mylist,k):
+def Rotate(mylist,k):
     k=k%len(mylist)
     temp=[0]*k
     for i in range(k):
-        temp.append(mylist[i])
-    for i in range( ):
-        mylist[k-i]=mylist[k]
-"""
+        temp[i]=mylist[i]
+    for i in range(k,len(mylist)):
+        mylist[i-k]=mylist[i]
+    for i in range(0,k):
+        mylist[len(mylist)-k+i]=temp[i]
+    return mylist
+mylist=[1,3,4,5,6]
+print(Rotate(mylist,4))
   
-
 
 
 #reversal algorithm
 """
-
 [5,6,10,1,32,33]
 [3]--->key
 [10,6,5,1,32,33]
 [10,6,5,33,32,1]
 [1,32,33,5,6,10]
-
 """
 def reverse(mylist,start,end):
     while start<end:
