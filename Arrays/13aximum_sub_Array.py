@@ -31,3 +31,23 @@ def Subarray(nums1,tar):
 mylist=[-2,1,-3,4,-1,2,1,-5,4] 
 ma_sub=Subarray(mylist,6)
 print(ma_sub)
+
+#two pointer approach
+def maxsub(nums,tar):
+    maxlen,right,left=0,0,0
+    sum=nums[0]
+    while right < len(nums):
+        while sum>tar and left<=right:
+            sum-=nums[left]
+            left+=1
+        if sum==tar:
+            maxlen=max(maxlen,right-left+1)
+        right+=1
+        if right < len(nums):
+            sum+=nums[right]
+    return maxlen
+mylist=[2,1,1,1,3,4,1,1,1,1,1,3] 
+length=maxsub(mylist,5)
+print(length)
+
+    
