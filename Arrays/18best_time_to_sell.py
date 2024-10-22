@@ -25,6 +25,6 @@ def sell_stock(nums):
         if max<=nums[j]:
             max=nums[j]
     return max-min
-mylist=[4,2,2,2,4]
+mylist=[7,6,4,1,6]
 max_profit=sell_stock(mylist)
 print(f"the maximum profit is : {max_profit}")
