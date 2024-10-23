@@ -14,7 +14,7 @@ def majority(nums):
                 max_count=count
                 ind=i
      return ind
-mylist=[1,2,1,1,1,1,1,3,3,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5]
+mylist=[1,2,1,1,1,1,1,3,3,4]
 max=majority(mylist)
 print("the majority element that the count greater than half of array is :",mylist[max])
             
@@ -29,13 +29,28 @@ def majorty_ele(nums):
             map[i]+=1
         else:
             map[i]=1
-    print(map)
     for i in nums:
         if map[i]>n:
-            if max_count < map[i]:
                 element=i
-                max_count=map[i]
     return element
-mylist=[1,2,1,1,1,1,1,3,3,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5]
+mylist=[1,2,1,1,1,1,1,3,3,4]
 max=majorty_ele(mylist)
-print("the majority element that the count greater than half of array is :",mylist[max])
+print("the majority element that the count greater than half of array is :",max)
+
+#moores voting algorithm
+def moores(nums):
+    count=0
+    element=None
+    for i in nums:
+        if count==0:
+            element=i
+        if element==i:
+            count+=1
+        else:
+            count-=1
+    return element
+mylist=[1,2,1,1,1,1,1,3,3,4]
+max=moores(mylist)
+print("the majority element that the count greater than half of array is :",max)
+
+        

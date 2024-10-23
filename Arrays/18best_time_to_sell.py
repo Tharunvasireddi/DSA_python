@@ -6,7 +6,6 @@ def stock(nums):
             buy=nums[i]
         if nums[i]-buy>max_profit:
             max_profit=nums[i]-buy
-            sell_day=nums[i]
     return max_profit
 mylist=[4,2,2,2,4]
 max_profit=stock(mylist)
