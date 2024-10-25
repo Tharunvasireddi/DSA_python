@@ -50,4 +50,28 @@ print(f"the merged array of given two arrays is : {merge_2(mylist,mylist1)}")
 
 #optimal solution 2
 def merge_3(num1,num2):
-     
+    m=len(num1)
+    n=len(num2)
+    length=m+n
+    left=0
+    gap=(length//2)+(length%2)
+    while gap>0:
+        left=0
+        right=gap+left
+        while right<length:
+            if left < m and right >= n:
+                if num1[left]<=num2[right-m]:
+                    num1[left],num2[right-m]=num2[right-m],num1[left]
+            elif left >=m :
+                if num2[left-m]>num2[right-n] :
+                    num2[left-m],num2[right-n]=num2[right-n] ,num1[left-m]
+            else:
+                if num1[left]>num1[right]:
+                    num1[left],num1[right]=num1[right],num1[left]
+            left+=1
+            right+=1
+        gap=(gap//2)+(gap%2)
+    return num1+num2
+mylist=[1,3,4,5,6]
+mylist1=[2,4,6,7,8,9]
+print(f"the merged array of given two arrays is : {merge_3(mylist,mylist1)}")

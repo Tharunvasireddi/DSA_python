@@ -4,7 +4,7 @@ def maximum_sum(nums):
     for i in range(len(nums)):
         sum=0
         for j in range(i,len(nums)):
-            sum+=nums[j]
+            sum+=nums[j]  
             if sum>max:
                 max=sum
     return max
