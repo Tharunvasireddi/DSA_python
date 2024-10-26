@@ -33,6 +33,6 @@ def Leaders(num1):
              left-=1
      return leaders
  
-mylist=[16,17,4,5,1,2]    
+mylist=[1,2,3,4,5,2]    
 print("leaders of the array is : ",leaders(mylist))   
         
