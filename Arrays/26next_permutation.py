@@ -23,7 +23,5 @@ def next_permutation(nums):
         left+=1
         right-=1
     return nums
-mylist=[1,2,3,4,5,6,7]
-perm=next_permutation(mylist)
-#print(f"the next permutation of the given {mylist} is : {next_permutation(mylist)}")
-print(perm)
+mylist=[1,2,3,4,5,6]
+print(f"the next permutation of the given {mylist} is : {next_permutation(mylist)}")

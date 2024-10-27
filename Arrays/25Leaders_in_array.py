@@ -28,11 +28,11 @@ def Leaders(num1):
          if num1[last]<num1[left]:
              leaders.append(num1[left])
              last=left
-             last=left
+             left-=1
          else:
              left-=1
      return leaders
  
-mylist=[1,2,3,4,5,2]    
+mylist=[10,9,8,7,6,5 ]    
 print("leaders of the array is : ",leaders(mylist))   
         
