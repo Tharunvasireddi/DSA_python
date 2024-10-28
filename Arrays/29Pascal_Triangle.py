@@ -8,3 +8,6 @@ def pascal(row,col):
 row=int(input("enter the row number : "))
 col=int(input("enter the column number :  "))
 print(f"the nth value of the pascal triangle is {pascal(row,col)}")
+
+#  nth row of pascal triangle
+ 
