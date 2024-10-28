@@ -66,7 +66,7 @@ def merge_3(num1,num2):
                 if num2[left-m]>num2[right-n] :
                     num2[left-m],num2[right-n]=num2[right-n] ,num1[left-m]
             else:
-                if num1[left]>num1[right]:
+                if num1[left]>=num1[right]:
                     num1[left],num1[right]=num1[right],num1[left]
             left+=1
             right+=1
