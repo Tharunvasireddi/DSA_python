@@ -39,10 +39,10 @@ def ThreeSum(nums,tar):
     for i in range(len(nums)):
         j=i+1
         k=len(nums)-1
-        if nums[i]==nums[i-1]:
+        if i>0 and  nums[i]==nums[i-1]:
             continue
-        sum=nums[i]+nums[j]+nums[k]
         while j < k :
+            sum=nums[i]+nums[j]+nums[k]
             if sum < tar:
                 j==1
             elif sum>tar:
