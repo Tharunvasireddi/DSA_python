@@ -1,5 +1,6 @@
+#brute force solution 
 def union(num1,nums2):
-     set1=set(num1)
+     set1=set(num1) # declaring  
      for i in nums2:
           set1.add(i)
      list1=list(set1)

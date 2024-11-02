@@ -1,5 +1,6 @@
+#solution
 def Max(my_list):
-    max=my_list[0]
+    max=float("-inf") # instialising with minimum value
     for i in my_list:
         if max<i:
             max=i
