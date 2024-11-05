@@ -1,8 +1,9 @@
+# solution
 def Second_max(my_list):
-    max = float('-inf')
+    max = float('-inf') # intialising max and max2 with minimum values
     max2 = float('-inf')
-    for i in my_list:
-        if max < i:
+    for i in my_list: # iterating the arary
+        if max < i: # 
              max2=max
              max=i
         elif i >max2 and max!=i:
